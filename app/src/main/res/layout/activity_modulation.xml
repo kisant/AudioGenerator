@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModulationActivity"
+    android:padding="5dp">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carrier">
+
+        <RadioButton
+            android:id="@+id/rb_sine_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sine"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_square_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+
+        <RadioButton
+            android:id="@+id/rb_triangular_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Triangular" />
+
+        <RadioButton
+            android:id="@+id/rb_saw_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saw" />
+
+        <RadioButton
+            android:id="@+id/rb_noise_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Noise" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_modeling">
+
+        <RadioButton
+            android:id="@+id/rb_sine_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sine"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_square_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+
+        <RadioButton
+            android:id="@+id/rb_triangular_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Triangular" />
+
+        <RadioButton
+            android:id="@+id/rb_saw_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saw" />
+
+        <RadioButton
+            android:id="@+id/rb_noise_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Noise" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type">
+
+        <RadioButton
+            android:id="@+id/rb_amplitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Amplitude" />
+
+        <RadioButton
+            android:id="@+id/rb_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frequency" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_carrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrier signal"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_modeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modeling signal"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Modulation type:"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup3"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/sb_carrier_frequency" />
+
+    <SeekBar
+        android:id="@+id/sb_carrier_frequency"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carrier_frequency" />
+
+    <SeekBar
+        android:id="@+id/sb_modeling_frequency"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_modeling_frequency" />
+
+    <TextView
+        android:id="@+id/tv_carrier_frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/sb_carrier_frequency"
+        app:layout_constraintStart_toStartOf="@+id/sb_carrier_frequency"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tv_modeling_frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/sb_modeling_frequency"
+        app:layout_constraintStart_toStartOf="@+id/sb_modeling_frequency"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/tv_frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequency:"
+        app:layout_constraintBottom_toTopOf="@+id/sb_carrier_frequency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/bt_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Graph"
+        app:layout_constraintStart_toEndOf="@+id/bt_generate"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <Button
+        android:id="@+id/bt_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Generate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
